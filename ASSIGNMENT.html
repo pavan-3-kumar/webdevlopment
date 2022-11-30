@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            background colour
+        </title>
+    </head>
+    <body style="background-color: rgb(7, 165, 86);  text-align: center;word-wrap: break-word;" >
+       <h2>enter a number to find factorial</h2> 
+      
+       <input id="fa" placeholder="enter a number">
+       <br>
+       <br>
+        <button   id="bu" style="border-radius: 10px;size: 100px;" onclick="txt()" >click to find answer</button>
+    <br>
+        <code id="an" style="font-size:50px;">
+         
+        </code>
+       
+        <span id="ro" style="color: red;font-size: 200px;"></span>
+        <script>
+             function txt(){
+               let p=document.getElementById("fa").value;
+var pa=document.getElementById("an");
+pa.innerHTML="1 ";
+let ans=1;
+               for(let i=2;i<=p;i++)
+               {
+                ans=ans*i;
+                     pa.innerHTML=pa.innerText+"* "+i;
+               }
+            //    var r=ans.style.color="red";
+               pa.innerHTML=pa.innerText+"=";
+               var ros=document.getElementById("ro");
+ros.innerHTML= "&quot;"+ans+"&quot;";
+               document.body.style.backgroundColor="skyblue";
+            }
+            
+        </script>
+    </body>
+</html>
